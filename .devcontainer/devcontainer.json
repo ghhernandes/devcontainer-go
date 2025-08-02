@@ -4,11 +4,11 @@
     "dockerfile": "Dockerfile"
   },
 
-  "mounts": [
-    "type=bind,source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh"
-  ],
+ // "mounts": [
+ //   "type=bind,source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh"
+ // ],
 
-  "postCreateCommand": "chmod 600 /home/vscode/.ssh/id_ed25519",
+ // "postCreateCommand": "chmod 600 /home/vscode/.ssh/id_ed25519",
 
   "customizations": {
     "vscode": {
