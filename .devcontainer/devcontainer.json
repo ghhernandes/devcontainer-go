@@ -1,21 +1,27 @@
 {
-  //"image": "mcr.microsoft.com/devcontainers/go"
   "build": {
     "dockerfile": "Dockerfile"
   },
 
- // "mounts": [
- //   "type=bind,source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh"
- // ],
+  "features": {
+    "ghcr.io/duduribeiro/devcontainer-features/neovim:1": {
+      "version": "stable"
+    },
 
- // "postCreateCommand": "chmod 600 /home/vscode/.ssh/id_ed25519",
+    "ghcr.io/duduribeiro/devcontainer-features/tmux:1": {
+      "version": "latest"
+    },
+
+    "ghcr.io/guiyomh/features/golangci-lint:0": {},
+
+    "ghcr.io/guiyomh/features/gotestsum:0": {}
+
+  },
 
   "customizations": {
     "vscode": {
       "extensions": [
-        "golang.go",
-        "golangci.golangci-lint",
-        "ms-vscode.go"
+        "golang.go"
       ]
     }
   },
