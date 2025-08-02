@@ -1,0 +1,24 @@
+{
+  //"image": "mcr.microsoft.com/devcontainers/go"
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "mounts": [
+    "type=bind,source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh"
+  ],
+
+  "postCreateCommand": "chmod 600 /home/vscode/.ssh/id_ed25519",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.go",
+        "golangci.golangci-lint",
+        "ms-vscode.go"
+      ]
+    }
+  },
+
+  "remoteUser": "vscode"
+}
